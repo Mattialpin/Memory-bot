@@ -3,8 +3,8 @@ from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationEntityMemory
 from langchain.chains.conversation.prompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE
 from langchain.llms import OpenAI
-#THIS IS THE WORKING VERSION
-#  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
+#THIS IS THE WORKING VERSION: DO NOT TOUCH
+#  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
 
 # Define a function to initialize the session state
 @st.cache_data
