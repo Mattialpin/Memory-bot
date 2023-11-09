@@ -6,14 +6,7 @@ from langchain.chains.conversation.memory import ConversationEntityMemory
 from langchain.chains.conversation.prompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE
 from langchain.chat_models import ChatOpenAI
 
-st.markdown(
-    """
-    <head>
-        <link rel="stylesheet" type="text/css" href="./style.css">
-    </head>
-    """,
-    unsafe_allow_html=True,
-)
+
 #improved graphics
 # Define a function to initialize the session state
 @st.cache_data
@@ -47,9 +40,10 @@ def new_chat():
     
 st.title("TechnoAlpin Bot 🤖")
 # Create a text input field in the sidebar for the OpenAI API key
-api = st.sidebar.text_input("API-KEY", 
-                placeholder="Paste your OpenAI API key here (sk-...)",
-                type='password')
+#api = st.sidebar.text_input("API-KEY", 
+                #placeholder="Paste your OpenAI API key here (sk-...)",
+                #type='password')
+api= constants.APIKEY
 
 # Check if an API key is provided
 if api:
