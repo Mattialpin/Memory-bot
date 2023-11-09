@@ -5,7 +5,7 @@ from langchain.chains.conversation.memory import ConversationEntityMemory
 from langchain.chains.conversation.prompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE
 import os
 from langchain.llms import OpenAI
-#  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
+#  
 # Set the page title and layout
 
 if "generated" not in st.session_state:

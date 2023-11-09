@@ -3,8 +3,15 @@ from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationEntityMemory
 from langchain.chains.conversation.prompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE
 from langchain.llms import OpenAI
-#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
-
+#
+st.markdown(
+    """
+    <head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    """,
+    unsafe_allow_html=True,
+)
 #improved graphics
 # Define a function to initialize the session state
 @st.cache_data
