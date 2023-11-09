@@ -1,9 +1,11 @@
 import streamlit as st
+import constants
+import sys
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationEntityMemory
 from langchain.chains.conversation.prompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE
-from langchain.llms import OpenAI
-#
+from langchain.chat_models import ChatOpenAI
+
 st.markdown(
     """
     <head>
@@ -52,7 +54,7 @@ api = st.sidebar.text_input("API-KEY",
 # Check if an API key is provided
 if api:
      # Initialize the OpenAI language model with the provided API key and selected model
-    llm = OpenAI(temperature=0, openai_api_key=api, model_name="gpt-3.5-turbo", verbose=False)
+    llm = ChatOpenAI(temperature=0, openai_api_key=api, model_name="gpt-3.5-turbo", verbose=False)
 
     entity_memory_key = 'entity_memory'  # Use a separate key for entity_memory
     # If entity_memory is not in the session state, initialize it
